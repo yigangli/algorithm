@@ -1,3 +1,5 @@
+package day20191211;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,6 +9,7 @@ public class Method {
         //System.out.println(huiwen("2112"));
         System.out.println(maxSubStringLenAndVal("1122332233344422"));
     }
+    //判断一个字符串是否是回文数，递归方式
     public static boolean huiwen(String str){
         int len=str.length();
         if(len<=1){
