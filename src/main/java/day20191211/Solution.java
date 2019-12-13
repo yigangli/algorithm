@@ -59,12 +59,21 @@ public class Solution {
         return ln2;
     }
 //输入一个链表，反转链表后，输出新链表的表头
-// TODO: 2019/12/11  输入一个链表，反转链表后，输出新链表的表头
-    public ListNode ReverseList(ListNode head) {
-        ListNode ln1=head;
-        ListNode ln2=head;
-
-        return ln2;
+    public static ListNode ReverseList(ListNode head) {
+        if(head==null){
+            return head;
+        }
+        ListNode h1 = head;
+        ListNode h2 = head;
+        ListNode p = h1.next;
+        h1.next = null;
+        while(p!=null){
+            h2 = h1;
+            h1 = p;
+            p = h1.next;
+            h1.next=h2;
+        }
+        return h1;
     }
 
 }

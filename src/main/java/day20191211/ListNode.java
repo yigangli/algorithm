@@ -17,7 +17,7 @@ public class ListNode {
         }
         return head;
     }
-    static void print(ListNode head){
+    public static void print(ListNode head){
         ListNode p = head;
         while(p!=null){
             System.out.print(p.val);
@@ -27,5 +27,6 @@ public class ListNode {
     public static void main(String[] args) {
         int[] arr = {1,3,4,2,3,5,7,6};
         print(init(arr));
+        print(Solution.ReverseList(init(arr)));
     }
 }
