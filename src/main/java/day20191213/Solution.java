@@ -2,6 +2,9 @@ package day20191213;
 
 import day20191211.ListNode;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class Solution {
     //读出N个数中第K个最大者
     public static int maxValInK(int[] arr,int k){
@@ -82,11 +85,16 @@ public class Solution {
         if(root1==null||root2==null){
             return false;
         }
-
         return false;
     }
     public static void main(String[] args) {
         int[] arr = {1,2,6,3,8,12,32,11,54,7,9};
         System.out.print(maxValInK(arr,7));
     }
+    public void printLots(ArrayList<Integer> l,ArrayList<Integer> p){
+        for (Integer a : p) {
+            System.out.print(l.get(a));
+        }
+    }
+
 }
